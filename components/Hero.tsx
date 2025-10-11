@@ -23,7 +23,7 @@ const Hero = () => {
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-ocr text-6xl md:text-8xl font-bold text-electric-blue glow-text"
+            className="font-ocr text-4xl sm:text-6xl md:text-8xl font-bold text-electric-blue glow-text px-4"
           >
             Offline_Labs
           </motion.h1>
@@ -33,7 +33,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed px-4"
           >
             A community building free, open source, ad-free alternatives for everyday apps.
             <br />

@@ -71,13 +71,13 @@ const Products = () => {
               {/* Product Header */}
               <div className="flex items-center space-x-4 mb-6">
                 {product.name === 'NutCracker' ? (
-                  <div className="w-16 h-16 bg-electric-blue/20 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-electric-blue/20 rounded-full flex items-center justify-center overflow-hidden">
                     <Image 
                       src="/nutcracker-logo.svg" 
                       alt="NutCracker Logo" 
-                      width={32} 
-                      height={32}
-                      className="text-electric-blue"
+                      width={48} 
+                      height={48}
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 ) : (

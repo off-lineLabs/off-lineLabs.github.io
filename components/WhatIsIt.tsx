@@ -56,7 +56,7 @@ const WhatIsIt = () => {
             apps fail to deliver a smooth experience while requiring all your data.
           </p>
           <p className="text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
-            We&apos;re a bunch of digital DIY enthusiasts who got tired of apps that spy on you, 
+            The goal is to gather digital DIY enthusiasts who got tired of apps that spy on you, 
             slow down your device, and require constant internet. So we decided to build our own. 
             These are the core values that guide everything we do:
           </p>

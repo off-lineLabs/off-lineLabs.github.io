@@ -19,9 +19,8 @@ const Navigation = () => {
   const navItems = [
     { name: 'What is it', href: '#what-is-it' },
     { name: 'Who we are', href: '#who-we-are' },
-    { name: 'Manifesto', href: '#manifesto' },
-    { name: 'Products', href: '#products' },
-    { name: 'Collaborate', href: '#collaborate' },
+    { name: "What we're building", href: '#products' },
+    { name: 'Get involved', href: '#collaborate' },
     { name: 'Contact', href: '#contact' },
   ]
 

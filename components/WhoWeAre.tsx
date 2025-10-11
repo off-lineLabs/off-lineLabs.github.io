@@ -30,14 +30,15 @@ const WhoWeAre = () => {
             Who <span className="text-electric-blue">We Are</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            Just a bunch of developers, designers, and privacy enthusiasts who got tired 
+            The vision is to build a community of developers, designers, and privacy enthusiasts who got tired 
             of corporate surveillance and decided to build our own stuff. No fancy offices, 
             no venture capital, just people who care about digital freedom.
           </p>
         </motion.div>
 
         {/* Team Members */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="flex justify-center mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl">
           {team.map((member, index) => (
             <motion.div
               key={member.name}
@@ -65,6 +66,7 @@ const WhoWeAre = () => {
               </a>
             </motion.div>
           ))}
+          </div>
         </div>
 
         {/* Community Section */}
