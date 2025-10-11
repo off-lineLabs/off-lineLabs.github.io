@@ -69,11 +69,11 @@ const HowToCollaborate = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            How to <span className="text-electric-blue">Collaborate</span>
+            How to <span className="text-electric-blue">Get Involved</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             We believe in the power of community. Every contribution, no matter how small, 
-            helps us build better privacy-first alternatives.
+            helps us build better privacy-first alternatives. No corporate hierarchy, just people working together.
           </p>
         </motion.div>
 
@@ -109,34 +109,6 @@ const HowToCollaborate = () => {
           ))}
         </div>
 
-        {/* Development Process */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">Development Process</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {steps.map((step, index) => (
-              <motion.div
-                key={step.number}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-electric-blue/20 rounded-full mb-4 mx-auto">
-                  <span className="text-2xl font-bold text-electric-blue">{step.number}</span>
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-2">{step.title}</h4>
-                <p className="text-white/70 leading-relaxed">{step.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Guidelines */}
         <motion.div

@@ -30,8 +30,9 @@ const WhoWeAre = () => {
             Who <span className="text-electric-blue">We Are</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            A community of developers, designers, and privacy enthusiasts working together 
-            to create better alternatives to mainstream apps.
+            Just a bunch of developers, designers, and privacy enthusiasts who got tired 
+            of corporate surveillance and decided to build our own stuff. No fancy offices, 
+            no venture capital, just people who care about digital freedom.
           </p>
         </motion.div>
 
@@ -80,10 +81,11 @@ const WhoWeAre = () => {
                 <Heart size={32} className="text-electric-blue" />
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Join Our Community</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Join the Movement</h3>
             <p className="text-lg text-white/80 max-w-3xl mx-auto mb-6">
-              We&apos;re always looking for contributors! Whether you&apos;re a developer, designer, 
-              tester, or just someone who cares about privacy, there&apos;s a place for you in our community.
+              We&apos;re always looking for more people to join us! Whether you&apos;re a developer, designer, 
+              tester, or just someone who cares about privacy, there&apos;s a place for you here. 
+              No experience required, just enthusiasm for building better software.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
@@ -103,7 +105,7 @@ const WhoWeAre = () => {
                 whileTap={{ scale: 0.95 }}
                 className="btn-secondary"
               >
-                Learn How to Contribute
+                See How to Help
               </motion.a>
             </div>
           </div>

@@ -35,9 +35,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed"
           >
-            Free, open source, ad-free alternatives for everyday apps.
+            A community building free, open source, ad-free alternatives for everyday apps.
             <br />
-            <span className="text-electric-blue font-semibold">No trackers. No data collection. No garbage code.</span>
+            <span className="text-electric-blue font-semibold">No trackers. No data collection. No corporate BS.</span>
           </motion.p>
 
           {/* Key Features */}
@@ -78,7 +78,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="btn-primary"
             >
-              Explore Products
+              Check Out Our Apps
             </motion.a>
             <motion.a
               href="#collaborate"
@@ -86,7 +86,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="btn-secondary"
             >
-              Join the Community
+              Get Involved
             </motion.a>
           </motion.div>
         </motion.div>

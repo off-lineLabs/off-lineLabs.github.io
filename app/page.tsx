@@ -6,7 +6,6 @@ import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import WhatIsIt from '@/components/WhatIsIt'
 import WhoWeAre from '@/components/WhoWeAre'
-import Manifesto from '@/components/Manifesto'
 import Products from '@/components/Products'
 import HowToCollaborate from '@/components/HowToCollaborate'
 import Contact from '@/components/Contact'
@@ -19,7 +18,6 @@ export default function Home() {
       <Hero />
       <WhatIsIt />
       <WhoWeAre />
-      <Manifesto />
       <Products />
       <HowToCollaborate />
       <Contact />

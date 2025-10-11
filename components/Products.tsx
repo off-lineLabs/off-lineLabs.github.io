@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Download, Star, ExternalLink, Smartphone, Activity } from 'lucide-react'
+import { Github, Download, Star, ExternalLink, Smartphone, Activity, Play } from 'lucide-react'
+import Image from 'next/image'
 
 const Products = () => {
   const products = [
@@ -48,11 +49,11 @@ const Products = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Our <span className="text-electric-blue">Products</span>
+            What We&apos;re <span className="text-electric-blue">Building</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             Privacy-first alternatives to mainstream apps. No trackers, no data collection, 
-            just pure functionality that works offline.
+            just pure functionality that works offline. Built by the community, for the community.
           </p>
         </motion.div>
 
@@ -69,9 +70,21 @@ const Products = () => {
             >
               {/* Product Header */}
               <div className="flex items-center space-x-4 mb-6">
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-electric-blue/20 rounded-full`}>
-                  <product.icon size={32} className={product.color} />
-                </div>
+                {product.name === 'NutCracker' ? (
+                  <div className="w-16 h-16 bg-electric-blue/20 rounded-full flex items-center justify-center">
+                    <Image 
+                      src="/nutcracker-logo.svg" 
+                      alt="NutCracker Logo" 
+                      width={32} 
+                      height={32}
+                      className="text-electric-blue"
+                    />
+                  </div>
+                ) : (
+                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-electric-blue/20 rounded-full`}>
+                    <product.icon size={32} className={product.color} />
+                  </div>
+                )}
                 <div>
                   <h3 className="text-2xl font-bold text-white">{product.name}</h3>
                   <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
@@ -107,26 +120,24 @@ const Products = () => {
                 {product.status === 'Available' ? (
                   <>
                     <motion.a
-                      href={product.github}
+                      href={`${product.github}/releases`}
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="btn-primary flex items-center justify-center space-x-2"
                     >
-                      <Github size={20} />
-                      <span>View on GitHub</span>
+                      <Play size={20} />
+                      <span>Download</span>
                     </motion.a>
                     <motion.a
-                      href={`${product.github}/releases`}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/nutcracker"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="btn-secondary flex items-center justify-center space-x-2"
                     >
-                      <Download size={20} />
-                      <span>Download</span>
+                      <ExternalLink size={20} />
+                      <span>Learn more</span>
                     </motion.a>
                   </>
                 ) : (
@@ -145,30 +156,6 @@ const Products = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-electric-blue/10 to-electric-blue/5 border border-electric-blue/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Want to Suggest a Product?</h3>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto mb-6">
-              Have an idea for a privacy-first alternative to a mainstream app? 
-              We&apos;d love to hear from you!
-            </p>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-primary"
-            >
-              Get in Touch
-            </motion.a>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

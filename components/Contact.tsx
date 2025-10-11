@@ -31,9 +31,9 @@ const Contact = () => {
       icon: Mail,
       title: 'Email',
       description: 'Send us an email for general inquiries',
-      contact: 'hello@offlinelabs.dev',
+      contact: 'online@offline-labs.com',
       action: 'Send Email',
-      link: 'mailto:hello@offlinelabs.dev',
+      link: 'mailto:online@offline-labs.com',
     },
     {
       icon: Github,
@@ -64,10 +64,11 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Get in <span className="text-electric-blue">Touch</span>
+            Let&apos;s <span className="text-electric-blue">Chat</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            Have questions, suggestions, or want to contribute? We&apos;d love to hear from you!
+            Got questions, ideas, or just want to say hi? We&apos;d love to hear from you! 
+            No corporate speak, just real people building cool stuff.
           </p>
         </motion.div>
 
@@ -80,7 +81,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Contact Methods</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Ways to Reach Us</h3>
             {contactMethods.map((method, index) => (
               <motion.div
                 key={method.title}
@@ -123,7 +124,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="bg-white/5 backdrop-blur-sm border border-electric-blue/20 rounded-xl p-8"
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Send us a Message</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Drop us a Line</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
