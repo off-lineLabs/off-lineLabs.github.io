@@ -96,14 +96,14 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 px-4"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center text-electric-blue"
+            className="flex flex-col items-center text-electric-blue text-center"
           >
-            <span className="text-sm mb-2">Scroll to explore</span>
+            <span className="text-sm mb-2 whitespace-nowrap">Scroll to explore</span>
             <ArrowDown size={24} />
           </motion.div>
         </motion.div>

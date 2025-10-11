@@ -59,7 +59,7 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -87,7 +87,7 @@ const Contact = () => {
                 key={method.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, x: 10 }}
                 className="bg-white/5 backdrop-blur-sm border border-electric-blue/20 rounded-xl p-6 hover:border-electric-blue/40 transition-all duration-300"

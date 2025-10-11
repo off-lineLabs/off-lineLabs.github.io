@@ -44,7 +44,7 @@ const Products = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -63,7 +63,7 @@ const Products = () => {
               key={product.name}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02, y: -5 }}
               className="bg-white/5 backdrop-blur-sm border border-electric-blue/20 rounded-2xl p-8 hover:border-electric-blue/40 transition-all duration-300"
