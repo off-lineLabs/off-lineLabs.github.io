@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Download, Star, Fork, ExternalLink, Smartphone, Activity } from 'lucide-react'
+import { Github, Download, Star, ExternalLink, Smartphone, Activity } from 'lucide-react'
 
 const Products = () => {
   const products = [
@@ -157,7 +157,7 @@ const Products = () => {
             <h3 className="text-2xl font-bold text-white mb-4">Want to Suggest a Product?</h3>
             <p className="text-lg text-white/80 max-w-2xl mx-auto mb-6">
               Have an idea for a privacy-first alternative to a mainstream app? 
-              We'd love to hear from you!
+              We&apos;d love to hear from you!
             </p>
             <motion.a
               href="#contact"

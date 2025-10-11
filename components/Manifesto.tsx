@@ -90,7 +90,7 @@ const Manifesto = () => {
             <div className="space-y-4 text-lg text-white/80 leading-relaxed">
               <p>
                 <strong className="text-electric-blue">We will never track you.</strong> Your data stays on your device. 
-                We don't collect analytics, usage statistics, or any personal information.
+                We don&apos;t collect analytics, usage statistics, or any personal information.
               </p>
               <p>
                 <strong className="text-electric-blue">We will never show you ads.</strong> Our apps are completely 
@@ -102,7 +102,7 @@ const Manifesto = () => {
               </p>
               <p>
                 <strong className="text-electric-blue">We will always work offline.</strong> Your apps should work 
-                when you need them most, whether you're on a plane, in a tunnel, or just have poor connectivity.
+                when you need them most, whether you&apos;re on a plane, in a tunnel, or just have poor connectivity.
               </p>
               <p>
                 <strong className="text-electric-blue">We will always be free.</strong> No subscriptions, no in-app 

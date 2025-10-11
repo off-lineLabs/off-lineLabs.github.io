@@ -67,7 +67,7 @@ const Contact = () => {
             Get in <span className="text-electric-blue">Touch</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            Have questions, suggestions, or want to contribute? We'd love to hear from you!
+            Have questions, suggestions, or want to contribute? We&apos;d love to hear from you!
           </p>
         </motion.div>
 
