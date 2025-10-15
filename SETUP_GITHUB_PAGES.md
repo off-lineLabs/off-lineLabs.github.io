@@ -36,3 +36,4 @@ If you still get permission errors:
 1. Make sure the repository is public
 2. Check that GitHub Actions has write permissions
 3. Verify the Pages source is set to "GitHub Actions"
+

@@ -6,6 +6,22 @@ const nextConfig = {
     unoptimized: true,
     domains: ['avatars.githubusercontent.com'],
   },
+  // Optimize build performance
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  // Skip type checking during build (run separately)
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+  // Optimize bundle
+  experimental: {
+    // optimizeCss: true, // Disabled due to compatibility issues
+  },
   async headers() {
     return [
       {

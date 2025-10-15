@@ -131,7 +131,7 @@ const Products = () => {
                       <span>Download</span>
                     </motion.a>
                     <motion.a
-                      href="/nutcracker"
+                      href="/wemade/nutcracker"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="btn-secondary flex items-center justify-center space-x-2"
