@@ -18,7 +18,7 @@ A modern, privacy-first website for Offline Labs - a project creating free, open
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
-- **Fonts**: Inter + Orbitron (OCR A Extended fallback)
+- **Fonts**: Inter + Orbitron
 
 ## Getting Started
 

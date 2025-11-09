@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'ocr': ['OCR A Extended', 'monospace'],
+        'ocr': ['Orbitron', 'Courier New', 'Monaco', 'Menlo', 'monospace'],
         'sans': ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
