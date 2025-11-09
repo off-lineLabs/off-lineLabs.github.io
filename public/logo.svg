@@ -4,11 +4,34 @@
 <svg
    width="762.1629"
    height="100"
-   viewBox="-650 0 1500 148.5"
+   viewBox="0 0 171.18097 148.5"
    version="1.1"
    id="svg5894"
+   sodipodi:docname="layer4.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1169"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="1.7424097"
+     inkscape:cx="252.81081"
+     inkscape:cy="50.79173"
+     inkscape:window-width="1920"
+     inkscape:window-height="983"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5894" />
   <defs
      id="defs5891">
     <rect
@@ -19,7 +42,8 @@
        id="rect8493" />
   </defs>
   <g
-     id="layer4">
+     id="layer4"
+     transform="translate(108.92202)">
     <path
        d="m -518.89538,78.1579 q -3.32174,0 -5.56873,-2.247053 -2.24706,-2.247 -2.24706,-5.568737 V 7.815789 q 0,-3.3217364 2.24706,-5.5687368 Q -522.21712,0 -518.89538,0 q 3.32169,0 5.56874,2.2470522 2.24705,2.2470004 2.24705,5.5687368 V 70.34211 q 0,3.321737 -2.24705,5.568737 -2.24705,2.247053 -5.56874,2.247053 z m 0,70.3421 q -14.65463,0 -27.45294,-5.56873 -12.79838,-5.5688 -22.27502,-15.04541 -9.47668,-9.47664 -15.04541,-22.27502 -5.56874,-12.798307 -5.56874,-27.45294 0,-11.919053 3.90789,-23.154265 3.9079,-11.23521 11.33291,-20.614159 2.14931,-2.735526 5.47105,-2.637843 3.32168,0.0979 5.86184,2.637843 2.14932,2.149368 1.95394,5.275632 -0.19525,3.126368 -2.14936,5.861895 -5.27563,7.034211 -8.01116,15.436159 -2.73553,8.402001 -2.73553,17.194738 0,22.86121 15.92469,38.78584 15.92463,15.92468 38.78584,15.92468 22.86117,0 38.78586,-15.92468 15.92467,-15.92463 15.92467,-38.78584 0,-8.988158 -2.63784,-17.487843 -2.63785,-8.499632 -8.30427,-15.533843 -1.95393,-2.540159 -2.14936,-5.56879 -0.19526,-3.02858 1.95394,-5.177948 2.34474,-2.344737 5.66648,-2.442422 3.32168,-0.0979 5.47105,2.442422 7.62037,9.378949 11.626,20.516475 4.00557,11.137475 4.00557,23.251949 0,14.654633 -5.56874,27.45294 -5.56879,12.79838 -15.04541,22.27502 -9.47663,9.47661 -22.275,15.04541 -12.79836,5.56873 -27.45295,5.56873 z"
        id="path5750"
@@ -31,9 +55,8 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.6667px;line-height:0;font-family:Orbitron;-inkscape-font-specification:Orbitron;letter-spacing:5px;word-spacing:0px;white-space:pre;shape-inside:url(#rect8493);shape-padding:0;fill:#cccccc;fill-opacity:1;stroke-width:0.0264567;stroke-linejoin:round;stroke-dasharray:none"><tspan
          x="147.23633"
          y="52.731126"
-         id="tspan1068"><tspan
+         id="tspan1299"><tspan
            style="line-height:0.8"
-           id="tspan1066">FFLINE_LABS</tspan></tspan></text>
+           id="tspan1297">FFLINE_LABS</tspan></tspan></text>
   </g>
 </svg>
-
