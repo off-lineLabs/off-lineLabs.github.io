@@ -24,14 +24,15 @@ const Hero = () => {
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center px-4"
+            className="flex justify-center px-4 py-2 overflow-visible"
           >
             <Image
               src="/logo.svg"
               alt="Offline Labs"
-              width={600}
-              height={80}
-              className="w-full max-w-4xl h-auto glow-logo"
+              width={800}
+              height={100}
+              className="w-full max-w-5xl h-auto glow-logo"
+              style={{ objectFit: 'contain' }}
               priority
             />
           </motion.div>

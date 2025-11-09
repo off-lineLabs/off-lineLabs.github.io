@@ -39,14 +39,15 @@ const Navigation = () => {
           <motion.a
             href="#"
             whileHover={{ scale: 1.05 }}
-            className="flex items-center"
+            className="flex items-center overflow-visible"
           >
             <Image
               src="/logo.svg"
               alt="Offline Labs"
-              width={150}
-              height={20}
+              width={200}
+              height={25}
               className="h-6 w-auto glow-logo"
+              style={{ objectFit: 'contain' }}
               priority
             />
           </motion.a>
