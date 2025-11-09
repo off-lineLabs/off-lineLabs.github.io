@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowDown, Zap, Shield, Heart } from 'lucide-react'
+import Image from 'next/image'
 
 const Hero = () => {
   return (
@@ -19,14 +20,21 @@ const Hero = () => {
           className="space-y-8"
         >
           {/* Logo */}
-          <motion.h1
+          <motion.div
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-ocr text-4xl sm:text-6xl md:text-8xl font-bold text-electric-blue glow-text px-4"
+            className="flex justify-center px-4"
           >
-            Offline_Labs
-          </motion.h1>
+            <Image
+              src="/logo.svg"
+              alt="Offline Labs"
+              width={600}
+              height={80}
+              className="w-full max-w-4xl h-auto glow-logo"
+              priority
+            />
+          </motion.div>
 
           {/* Tagline */}
           <motion.p

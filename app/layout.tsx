@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Jonas Coelho' }],
   creator: 'Jonas Coelho',
   publisher: 'Offline Labs',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   formatDetection: {
     email: false,
     address: false,

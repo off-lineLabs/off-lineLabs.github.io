@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -35,12 +36,20 @@ const Navigation = () => {
       <div className="container-max section-padding">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <motion.div
+          <motion.a
+            href="#"
             whileHover={{ scale: 1.05 }}
-            className="font-ocr text-2xl font-bold text-electric-blue glow-text"
+            className="flex items-center"
           >
-            Offline_Labs
-          </motion.div>
+            <Image
+              src="/logo.svg"
+              alt="Offline Labs"
+              width={150}
+              height={20}
+              className="h-6 w-auto glow-logo"
+              priority
+            />
+          </motion.a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
