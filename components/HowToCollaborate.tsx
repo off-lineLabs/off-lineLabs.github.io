@@ -106,9 +106,9 @@ const HowToCollaborate = () => {
             <h3 className="text-2xl font-bold text-white mb-4">Contribution Guidelines</h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 max-w-3xl mx-auto">
+            <div className="text-center md:text-left">
+              <h4 className="text-lg font-semibold text-white mb-3 flex items-center justify-center md:justify-start">
                 <Zap className="text-electric-blue mr-2" size={20} />
                 Code Standards
               </h4>
@@ -120,8 +120,8 @@ const HowToCollaborate = () => {
               </ul>
             </div>
             
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+            <div className="text-center md:text-left">
+              <h4 className="text-lg font-semibold text-white mb-3 flex items-center justify-center md:justify-start">
                 <Users className="text-electric-blue mr-2" size={20} />
                 Community
               </h4>

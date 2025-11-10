@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Github, Mail, Heart, ArrowUp } from 'lucide-react'
+import Image from 'next/image'
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -9,19 +10,19 @@ const Footer = () => {
   }
 
   const footerLinks = {
-    'Products': [
+    'We made': [
       { name: 'NutCracker', href: 'https://github.com/off-lineLabs/nutcracker' },
       { name: 'GitHub', href: 'https://github.com/off-lineLabs' },
     ],
     'Community': [
       { name: 'Contributing', href: '#collaborate' },
-      { name: 'Discussions', href: 'https://github.com/off-lineLabs/discussions' },
+      { name: 'Discussions', href: 'https://github.com/orgs/off-lineLabs/discussions' },
       { name: 'Contact', href: '#contact' },
     ],
     'Resources': [
       { name: 'Documentation', href: 'https://github.com/off-lineLabs' },
       { name: 'Privacy Policy', href: '#' },
-      { name: 'Code of Conduct', href: '#' },
+      { name: 'Code of Conduct', href: 'https://github.com/off-lineLabs/community/tree/main?tab=coc-ov-file' },
     ],
   }
 
@@ -37,8 +38,15 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <div className="font-ocr text-2xl font-bold text-electric-blue glow-text mb-4">
-              Offline_Labs
+            <div className="mb-4">
+              <Image
+                src="/logo.svg"
+                alt="Offline Labs"
+                width={200}
+                height={25}
+                className="h-6 w-auto glow-logo"
+                style={{ objectFit: 'contain' }}
+              />
             </div>
             <p className="text-white/70 mb-6 leading-relaxed">
               Free, open source, ad-free alternatives for everyday apps. 
@@ -56,7 +64,7 @@ const Footer = () => {
                 <Github size={20} />
               </motion.a>
               <motion.a
-                href="mailto:hello@offlinelabs.dev"
+                href="mailto:online@offline-labs.com"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center justify-center w-10 h-10 bg-electric-blue/20 rounded-full text-electric-blue hover:bg-electric-blue/30 transition-all duration-300"
@@ -105,14 +113,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-2 text-white/70 mb-4 md:mb-0">
-              <span>Made with</span>
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity }}
-              >
-                <Heart size={16} className="text-red-500" />
-              </motion.div>
-              <span>by the Offline Labs community</span>
+              <span>Made by the Offline Labs community</span>
             </div>
             
             <div className="flex items-center space-x-6">

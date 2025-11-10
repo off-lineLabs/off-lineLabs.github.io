@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { WifiOff, Shield, Code, Heart, Lock, Zap } from 'lucide-react'
+import { WifiOff, Shield, Code, Heart, Lock, Zap, SlidersHorizontal, Target } from 'lucide-react'
 
 const WhatIsIt = () => {
   const coreValues = [
@@ -21,9 +21,9 @@ const WhatIsIt = () => {
       description: 'Transparency builds trust. All our code is open source and auditable.',
     },
     {
-      icon: Zap,
-      title: 'Performance',
-      description: 'No bloat, no unnecessary features. Just fast, efficient software that works.',
+      icon: Target,
+      title: 'Focused Utility',
+      description: 'No bloat, no ads, no unnecessary "smart" features. Just fast, efficient software that does what it is supposed to do.',
     },
     {
       icon: Heart,
@@ -31,9 +31,9 @@ const WhatIsIt = () => {
       description: 'Built by the community, for the community. No corporate interests or profit motives.',
     },
     {
-      icon: Lock,
-      title: 'Transparency',
-      description: 'We show you exactly what our apps do. No hidden features or data collection.',
+      icon: SlidersHorizontal,
+      title: 'User Empowerment',
+      description: 'Full control, no unnecessary limits. Our apps let you customize and optimize your experience as you see fit.',
     },
   ]
 

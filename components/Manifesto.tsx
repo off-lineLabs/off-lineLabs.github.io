@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Shield, Eye, Lock, Zap, Heart, Code } from 'lucide-react'
+import { Shield, Eye, Lock, Zap, Heart, Code, SlidersHorizontal, Target } from 'lucide-react'
 
 const Manifesto = () => {
   const principles = [
@@ -21,9 +21,9 @@ const Manifesto = () => {
       description: 'Transparency builds trust. All our code is open source and auditable.',
     },
     {
-      icon: Zap,
-      title: 'Performance',
-      description: 'No bloat, no unnecessary features. Just fast, efficient software that works.',
+      icon: Target,
+      title: 'Focused Utility',
+      description: 'No bloat, no ads, no unnecessary "smart" features. Just fast, efficient software that does what it is supposed to do.',
     },
     {
       icon: Heart,
@@ -31,9 +31,9 @@ const Manifesto = () => {
       description: 'Built by the community, for the community. No corporate interests or profit motives.',
     },
     {
-      icon: Eye,
-      title: 'Transparency',
-      description: 'We show you exactly what our apps do. No hidden features or data collection.',
+      icon: SlidersHorizontal,
+      title: 'User Empowerment',
+      description: 'We trust our users to make the most of their devices, offering full control and freedom without unnecessary restrictions. Our apps respect your capabilities, empowering advanced users to customize and optimize their experience.',
     },
   ]
 

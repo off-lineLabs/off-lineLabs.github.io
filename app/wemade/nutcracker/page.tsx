@@ -11,6 +11,8 @@ import {
   Smartphone,
   Shield,
   Zap,
+  Target,
+  SlidersHorizontal,
   Activity,
   Users,
   Code,
@@ -107,10 +109,10 @@ const NutCrackerPage = () => {
   ]
 
   const screenshots = [
-    { src: '/nutcracker-screenshot-1.png', alt: 'NutCracker Main Dashboard' },
-    { src: '/nutcracker-screenshot-2.png', alt: 'Meal Tracking Interface' },
-    { src: '/nutcracker-screenshot-3.png', alt: 'Exercise Logging Screen' },
-    { src: '/nutcracker-screenshot-4.png', alt: 'Progress Analytics' }
+    { src: '/nutcracker-screenshot-1.png', title: 'Track calories and macros', alt: 'Advanced calorie tracker including TEF bonus, fiber and salt intake' },
+    { src: '/nutcracker-screenshot-2.png', title: 'Food quality scores', alt: 'Get NOVA, NUTRI and Eco-score of each food, beyond its nutrients' },
+    { src: '/nutcracker-screenshot-3.png', title: 'Progress analytics', alt: 'Check your weekly or monthly progress with detailed analytics' },
+    { src: '/nutcracker-screenshot-4.png', title: 'Gym routine tracker', alt: 'Easily keep track your gym routine' }
   ]
 
   return (
@@ -232,14 +234,25 @@ const NutCrackerPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.05, y: -10 }}
-                className="bg-white/5 backdrop-blur-sm border border-electric-blue/20 rounded-2xl p-4 hover:border-electric-blue/40 transition-all duration-300"
+                whileHover={{ scale: 1.03, y: -6 }}
+                className="group rounded-lg overflow-hidden"
               >
-                <div className="aspect-[9/16] bg-gradient-to-b from-electric-blue/10 to-electric-blue/5 rounded-xl flex items-center justify-center">
-                  <div className="text-center">
-                    <Smartphone size={48} className="text-electric-blue/50 mx-auto mb-4" />
-                    <p className="text-white/50 text-sm">Screenshot {index + 1}</p>
-                    <p className="text-white/30 text-xs mt-2">{screenshot.alt}</p>
+                <div className="aspect-[9/16] relative">
+                  <Image
+                    src={screenshot.src}
+                    alt={screenshot.alt}
+                    fill
+                    priority={index === 0}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+                    <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/90 via-black/50 to-transparent blur-xl"></div>
+                    <div className="relative p-3">
+                      <p className="text-[11px] font-semibold text-electric-blue">{screenshot.title}</p>
+                      <p className="text-[10px] text-white/80 mt-0.5 line-clamp-2">{screenshot.alt}</p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
