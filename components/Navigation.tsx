@@ -95,14 +95,14 @@ const Navigation = () => {
           animate={{ height: isOpen ? 'auto' : 0 }}
           className="md:hidden overflow-hidden"
         >
-          <div className="py-4 space-y-4">
+          <div className="py-4 space-y-4 bg-black/90 backdrop-blur-md rounded-b-xl shadow-lg">
             {navItems.map((item) => (
               <motion.a
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
                 whileHover={{ x: 10 }}
-                className="block text-white hover:text-electric-blue transition-colors duration-300 font-medium"
+                className="block text-white hover:text-electric-blue transition-colors duration-300 font-medium px-4"
               >
                 {item.name}
               </motion.a>
