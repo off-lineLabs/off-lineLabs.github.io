@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+
 import './globals.css'
+import { CentralLogoProvider } from '../components/CentralLogoProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -59,7 +61,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        {children}
+        <CentralLogoProvider>
+          {children}
+        </CentralLogoProvider>
       </body>
     </html>
   )

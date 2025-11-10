@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { CentralLogoContext } from './CentralLogoProvider'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
@@ -8,6 +9,8 @@ import Image from 'next/image'
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const context = useContext(CentralLogoContext)
+  const centralLogoVisible = context?.centralLogoVisible ?? true
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,15 +43,26 @@ const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center overflow-visible"
           >
-            <Image
-              src="/logo.svg"
-              alt="Offline Labs"
-              width={200}
-              height={25}
-              className="h-6 w-auto glow-logo"
-              style={{ objectFit: 'contain' }}
-              priority
-            />
+            <motion.div
+              initial={false}
+              animate={{
+                opacity: centralLogoVisible ? 0 : 1,
+                y: centralLogoVisible ? -20 : 0,
+                pointerEvents: centralLogoVisible ? 'none' : 'auto',
+              }}
+              transition={{ duration: 0.4 }}
+              style={{ display: 'flex' }}
+            >
+              <Image
+                src="/logo.svg"
+                alt="Offline Labs"
+                width={200}
+                height={25}
+                className="h-6 w-auto glow-logo"
+                style={{ objectFit: 'contain' }}
+                priority
+              />
+            </motion.div>
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -96,7 +110,7 @@ const Navigation = () => {
           </div>
         </motion.div>
       </div>
-    </motion.nav>
+      </motion.nav>
   )
 }
 

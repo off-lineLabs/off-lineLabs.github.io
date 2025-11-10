@@ -1,30 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Github, MessageCircle, Send } from 'lucide-react'
-import { useState } from 'react'
+import { Mail, Github, MessageCircle } from 'lucide-react'
+// Form functionality temporarily removed as per request; keeping code lean.
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    // You can integrate with a service like Formspree, Netlify Forms, or your own backend
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
+  // Form state & handlers removed while the form is hidden.
 
   const contactMethods = [
     {
@@ -69,7 +50,8 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+  {/* Single column layout now that the form is hidden */}
+  <div className="grid grid-cols-1 gap-12 max-w-3xl mx-auto">
           {/* Contact Methods */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -96,7 +78,7 @@ const Contact = () => {
                   <div className="flex-1">
                     <h4 className="text-lg font-semibold text-white mb-2">{method.title}</h4>
                     <p className="text-white/70 mb-2">{method.description}</p>
-                    <p className="text-electric-blue font-medium mb-3">{method.contact}</p>
+                    {/* Removed undefined method.contact field */}
                     <motion.a
                       href={method.link}
                       target="_blank"
@@ -113,92 +95,7 @@ const Contact = () => {
             ))}
           </motion.div>
 
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-sm border border-electric-blue/20 rounded-xl p-8"
-          >
-            <h3 className="text-2xl font-bold text-white mb-6">Drop us a Line</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/10 border border-electric-blue/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-electric-blue/50 focus:border-electric-blue transition-all duration-300"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/10 border border-electric-blue/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-electric-blue/50 focus:border-electric-blue transition-all duration-300"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-white mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/10 border border-electric-blue/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-electric-blue/50 focus:border-electric-blue transition-all duration-300"
-                  placeholder="What's this about?"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white/10 border border-electric-blue/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-electric-blue/50 focus:border-electric-blue transition-all duration-300 resize-none"
-                  placeholder="Tell us what's on your mind..."
-                />
-              </div>
-              
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full btn-primary flex items-center justify-center space-x-2"
-              >
-                <Send size={20} />
-                <span>Send Message</span>
-              </motion.button>
-            </form>
-          </motion.div>
+          {/* Contact form intentionally hidden */}
         </div>
       </div>
     </section>

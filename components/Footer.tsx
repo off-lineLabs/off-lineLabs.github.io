@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Mail, Heart, ArrowUp } from 'lucide-react'
+import { Github, Mail, Heart, ArrowUp, Cookie, X } from 'lucide-react'
 import Image from 'next/image'
 
 const Footer = () => {
@@ -113,7 +113,19 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-2 text-white/70 mb-4 md:mb-0">
-              <span>Made by the Offline Labs community</span>
+              {/* Crossed Cookie Icon */}
+              <span className="relative inline-flex w-6 h-6 mr-2">
+                {/* Base cookie icon (24px) */}
+                <Cookie className="absolute text-electric-blue w-6 h-6" />
+                {/* Mini X icon (25% size ~6px) positioned at top-right */}
+                <span className="absolute top-0 right-0 w-[12px] h-[12px] flex items-center justify-center">
+                  {/* Shadow layers for subtle contrast */}
+                  <span className="absolute inset-0 rounded-sm bg-red-500/60 blur-[2px] opacity-70" aria-hidden="true" />
+                  <span className="absolute inset-0 rounded-sm bg-black/40 blur-[3px] opacity-40" aria-hidden="true" />
+                  <X className="relative text-red-500 w-full h-full drop-shadow-[0_0_2px_rgba(0,0,0,0.6)]" />
+                </span>
+              </span>
+              <span>This website is cookie-free</span>
             </div>
             
             <div className="flex items-center space-x-6">

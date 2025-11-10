@@ -4,7 +4,25 @@ import { motion } from 'framer-motion'
 import { ArrowDown, Zap, Shield, Heart } from 'lucide-react'
 import Image from 'next/image'
 
+import { useRef, useEffect, useContext } from 'react'
+import { CentralLogoContext } from './CentralLogoProvider'
+
 const Hero = () => {
+  const logoRef = useRef<HTMLDivElement>(null)
+  const context = useContext(CentralLogoContext)
+
+  useEffect(() => {
+    if (!logoRef.current || !context) return
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        context.setCentralLogoVisible(entry.isIntersecting)
+      },
+      { threshold: 0.5 }
+    )
+    observer.observe(logoRef.current)
+    return () => observer.disconnect()
+  }, [logoRef, context])
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pb-24">
       {/* Background Effects */}
@@ -21,6 +39,7 @@ const Hero = () => {
         >
           {/* Logo */}
           <motion.div
+            ref={logoRef}
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
