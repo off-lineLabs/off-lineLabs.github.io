@@ -36,12 +36,12 @@ const Navigation = () => {
       }`}
     >
       <div className="container-max section-padding">
-        <div className="flex items-center justify-between md:justify-between h-16">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.a
             href="#"
             whileHover={{ scale: 1.05 }}
-            className="flex items-center shrink-0 md:flex-none absolute left-1/2 -translate-x-1/2 md:relative md:left-auto md:translate-x-0"
+            className="flex items-center"
           >
             <motion.div
               initial={false}
@@ -51,7 +51,7 @@ const Navigation = () => {
                 pointerEvents: centralLogoVisible ? 'none' : 'auto',
               }}
               transition={{ duration: 0.4 }}
-              className="relative h-6 w-[200px]"
+              className="relative h-6 w-[200px] pt-[50px]"
             >
               <Image
                 src="/logo.svg"
@@ -82,7 +82,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white hover:text-electric-blue transition-colors duration-300 relative z-10"
+            className="md:hidden text-white hover:text-electric-blue transition-colors duration-300"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
