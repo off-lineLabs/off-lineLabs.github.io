@@ -41,7 +41,7 @@ const Navigation = () => {
           <motion.a
             href="#"
             whileHover={{ scale: 1.05 }}
-            className="flex items-center overflow-visible"
+            className="flex items-center"
           >
             <motion.div
               initial={false}
@@ -51,15 +51,15 @@ const Navigation = () => {
                 pointerEvents: centralLogoVisible ? 'none' : 'auto',
               }}
               transition={{ duration: 0.4 }}
-              style={{ display: 'flex' }}
+              className="flex items-center justify-center"
+              style={{ maxWidth: '200px', width: '100%' }}
             >
               <Image
                 src="/logo.svg"
                 alt="Offline Labs"
                 width={200}
                 height={25}
-                className="h-6 w-auto glow-logo"
-                style={{ objectFit: 'contain' }}
+                className="h-6 w-auto glow-logo max-w-full"
                 priority
               />
             </motion.div>
