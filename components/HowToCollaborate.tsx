@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Code, Bug, FileText, Users, Heart, Zap } from 'lucide-react'
+import { Github, Code, Bug, FileText, Users, Heart, Zap, MessageSquare } from 'lucide-react'
 
 const HowToCollaborate = () => {
   const waysToContribute = [
@@ -9,29 +9,21 @@ const HowToCollaborate = () => {
       icon: Code,
       title: 'Code Development',
       description: 'Contribute to our open source projects. Whether you\'re fixing bugs or adding features, every contribution matters.',
-      action: 'View on GitHub',
-      link: 'https://github.com/off-lineLabs',
     },
     {
       icon: Bug,
       title: 'Bug Reports',
       description: 'Found a bug? Report it! Help us make our apps more stable and reliable.',
-      action: 'Report Issues',
-      link: 'https://github.com/off-lineLabs/nutcracker/issues',
     },
     {
       icon: FileText,
       title: 'Documentation',
       description: 'Help improve our documentation, write tutorials, or translate our apps.',
-      action: 'Help with Docs',
-      link: 'https://github.com/off-lineLabs',
     },
     {
       icon: Users,
       title: 'Community',
       description: 'Join our community discussions, share ideas, and help others.',
-      action: 'Join Community',
-      link: '#contact',
     },
   ]
 
@@ -93,18 +85,7 @@ const HowToCollaborate = () => {
                 <way.icon size={32} className="text-electric-blue" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">{way.title}</h3>
-              <p className="text-white/70 mb-4 leading-relaxed">{way.description}</p>
-              <motion.a
-                href={way.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center space-x-2 text-electric-blue hover:text-electric-blue/80 transition-colors duration-300 font-medium"
-              >
-                <span>{way.action}</span>
-                <Github size={16} />
-              </motion.a>
+              <p className="text-white/70 leading-relaxed">{way.description}</p>
             </motion.div>
           ))}
         </div>
@@ -125,7 +106,7 @@ const HowToCollaborate = () => {
             <h3 className="text-2xl font-bold text-white mb-4">Contribution Guidelines</h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div>
               <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
                 <Zap className="text-electric-blue mr-2" size={20} />
@@ -151,6 +132,20 @@ const HowToCollaborate = () => {
                 <li>• Follow our code of conduct</li>
               </ul>
             </div>
+          </div>
+          
+          <div className="flex justify-center">
+            <motion.a
+              href="https://github.com/orgs/off-lineLabs/discussions"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-primary inline-flex items-center space-x-2"
+            >
+              <MessageSquare size={20} />
+              <span>Join the movement</span>
+            </motion.a>
           </div>
         </motion.div>
       </div>

@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pb-24">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-electric-blue/5" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-electric-blue/10 rounded-full blur-3xl animate-pulse" />
@@ -98,22 +98,21 @@ const Hero = () => {
               Get Involved
             </motion.a>
           </motion.div>
-        </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 px-4"
-        >
+          {/* Scroll Indicator (moved into flow) */}
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center text-electric-blue text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.5 }}
+            className="mt-20"
           >
-            <span className="text-sm mb-2 whitespace-nowrap">Scroll to explore</span>
-            <ArrowDown size={24} />
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="flex flex-col items-center text-electric-blue text-center"
+            >
+              <span className="text-sm mb-2 whitespace-nowrap">Scroll to explore</span>
+              <ArrowDown size={24} />
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

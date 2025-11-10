@@ -17,7 +17,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <WhatIsIt />
-      <WhoWeAre />
+      {/* <WhoWeAre /> */}
       <Products />
       <HowToCollaborate />
       <Contact />
