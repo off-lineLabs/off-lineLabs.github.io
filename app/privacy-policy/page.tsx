@@ -86,7 +86,7 @@ const PrivacyPolicy = () => {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-electric-blue/20 hover:border-electric-blue/40 transition-all duration-300">
                 <h2 className="text-2xl font-semibold mb-4 text-electric-blue">Third-Party Infrastructure</h2>
                 <p className="text-white/80 leading-relaxed">
-                  Our infrastructure relies on Cloudflare for DNS resolution and DDoS protection, and GitHub Pages for static site hosting. These providers operate at the network layer and may log IP addresses, user agents, request timestamps, and TLS handshake metadata as part of their standard operational telemetry. While we have no access to or control over this data, you should review Cloudflare's and GitHub's respective privacy policies to understand their data retention and processing practices.
+                  Our infrastructure relies on Cloudflare for DNS resolution and DDoS protection, and GitHub Pages for static site hosting. These providers operate at the network layer and may log IP addresses, user agents, request timestamps, and TLS handshake metadata as part of their standard operational telemetry. While we have no access to or control over this data, you should review Cloudflare&apos;s and GitHub&apos;s respective privacy policies to understand their data retention and processing practices.
                 </p>
               </div>
 
