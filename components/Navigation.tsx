@@ -51,7 +51,7 @@ const Navigation = () => {
                 pointerEvents: centralLogoVisible ? 'none' : 'auto',
               }}
               transition={{ duration: 0.4 }}
-              className="relative h-6 w-[200px] pt-[50px]"
+              className="relative h-6 w-[200px]"
             >
               <Image
                 src="/logo.svg"

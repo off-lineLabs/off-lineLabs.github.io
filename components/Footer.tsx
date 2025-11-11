@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Mail, Heart, ArrowUp, Cookie, X } from 'lucide-react'
+import { Github, Mail, Heart, ArrowUp, Cookie, X, CircleOff } from 'lucide-react'
 import Image from 'next/image'
 
 const Footer = () => {
@@ -21,10 +21,12 @@ const Footer = () => {
     ],
     'Resources': [
       { name: 'Documentation', href: 'https://github.com/off-lineLabs' },
-      { name: 'Privacy Policy', href: '#' },
+      { name: 'Privacy Policy', href: '/privacy-policy' },
       { name: 'Code of Conduct', href: 'https://github.com/off-lineLabs/community/tree/main?tab=coc-ov-file' },
     ],
   }
+
+  const currentYear = new Date().getFullYear()
 
   return (
     <footer className="bg-black border-t border-electric-blue/20">
@@ -117,20 +119,15 @@ const Footer = () => {
               <span className="relative inline-flex w-6 h-6 mr-2">
                 {/* Base cookie icon (24px) */}
                 <Cookie className="absolute text-electric-blue w-6 h-6" />
-                {/* Mini X icon (25% size ~6px) positioned at top-right */}
-                <span className="absolute top-0 right-0 w-[12px] h-[12px] flex items-center justify-center">
-                  {/* Shadow layers for subtle contrast */}
-                  <span className="absolute inset-0 rounded-sm bg-red-500/60 blur-[2px] opacity-70" aria-hidden="true" />
-                  <span className="absolute inset-0 rounded-sm bg-black/40 blur-[3px] opacity-40" aria-hidden="true" />
-                  <X className="relative text-red-500 w-full h-full drop-shadow-[0_0_2px_rgba(0,0,0,0.6)]" />
-                </span>
+                {/* Ban icon (10% larger, fully covers cookie) */}
+                <CircleOff strokeWidth={1} className="absolute text-red-500 w-[40px] h-[40px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_0_2px_rgba(0,0,0,0.6)] pointer-events-none" style={{zIndex:2}} />
               </span>
               <span>This website is cookie-free</span>
             </div>
             
             <div className="flex items-center space-x-6">
               <span className="text-white/70 text-sm">
-                © 2024 Offline Labs. All rights reserved.
+                © {currentYear} Offline Labs. All rights reserved.
               </span>
               <motion.button
                 onClick={scrollToTop}

@@ -43,7 +43,7 @@ const Hero = () => {
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center items-center w-full px-4 py-2"
+            className="flex justify-center items-center w-full px-4 py-2 pt-[50px]"
           >
             <Image
               src="/logo.svg"
