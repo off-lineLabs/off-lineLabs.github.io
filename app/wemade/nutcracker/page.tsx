@@ -16,7 +16,12 @@ import {
   Activity,
   Users,
   Code,
-  Globe
+  Globe,
+  Search,
+  Pill,
+  Sheet,
+  Dumbbell,
+  ClipboardList
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -77,29 +82,29 @@ const NutCrackerPage = () => {
 
   const features = [
     {
-      icon: Activity,
+      icon: ClipboardList,
       title: 'Meal Tracking',
-      description: 'Log your meals with detailed nutritional information. Track calories, macros, and micros with ease.'
+      description: 'Log your meals with detailed nutritional information. Track calories and macronutrients with ease.'
     },
     {
-      icon: Zap,
+      icon: Dumbbell,
       title: 'Exercise Logging',
-      description: 'Record your workouts and track your fitness progress. Set goals and monitor your achievements.'
+      description: 'Record your workouts and track your fitness progress. Monitor your achievements and history.'
     },
     {
-      icon: Shield,
-      title: 'Complete Privacy',
-      description: 'No cloud sync, no data collection. Your data stays on your device, always under your control.'
+      icon: Search,
+      title: 'Food Details',
+      description: 'Search food by name or barcode to get extensive nutritional data, including NOVA and NUTRI score.'
     },
     {
-      icon: Smartphone,
-      title: 'Offline First',
-      description: 'Works perfectly without internet connection. All features available even in airplane mode.'
+      icon: Pill,
+      title: 'Supplement Tracking',
+      description: 'Keep track of the daily consumption of up to 5 supplements. No more worries about forgetting them.'
     },
     {
-      icon: Code,
-      title: 'Open Source',
-      description: 'Fully auditable code. Built by the community, for the community. No hidden surprises.'
+      icon: Sheet,
+      title: 'Export Everything',
+      description: 'All your data can be exported as CSV files for easy backup or your own analysis.'
     },
     {
       icon: Users,
@@ -128,27 +133,7 @@ const NutCrackerPage = () => {
               <ArrowLeft size={20} />
               <span>Back to Offline Labs</span>
             </Link>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <Globe size={16} className="text-electric-blue" />
-                <span className="text-sm text-white/70">Language:</span>
-                <div className="flex space-x-1">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => setSelectedLanguage(lang.code)}
-                      className={`px-2 py-1 rounded text-sm transition-colors ${
-                        selectedLanguage === lang.code
-                          ? 'bg-electric-blue/20 text-electric-blue border border-electric-blue/30'
-                          : 'text-white/70 hover:text-white hover:bg-white/10'
-                      }`}
-                    >
-                      {lang.flag}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
+            {/* Language menu removed from navbar */}
           </div>
         </div>
       </nav>
@@ -306,52 +291,71 @@ const NutCrackerPage = () => {
       </section>
 
       {/* Terms and Privacy Section */}
-      <section id="terms" className="py-20 section-padding">
-        <div className="container-max">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-white/5 backdrop-blur-sm border border-electric-blue/20 rounded-2xl p-8">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-white">
-                  Terms of Use & Privacy Policy
-                </h2>
-                <button
-                  onClick={() => setIsTermsExpanded(!isTermsExpanded)}
-                  className="flex items-center space-x-2 text-electric-blue hover:text-electric-blue/80 transition-colors"
-                >
-                  <span className="text-sm">
-                    {isTermsExpanded ? 'Hide' : 'Show'} Terms
-                  </span>
-                  {isTermsExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                </button>
+  <section id="terms" className="py-20 section-padding">
+    <div className="container-max">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="max-w-4xl mx-auto"
+      >
+        <div className="bg-white/5 backdrop-blur-sm border border-electric-blue/20 rounded-2xl p-8">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-white">
+              Terms of Use & Privacy Policy
+            </h2>
+            <button
+              onClick={() => setIsTermsExpanded(!isTermsExpanded)}
+              className="flex items-center space-x-2 text-electric-blue hover:text-electric-blue/80 transition-colors"
+            >
+              <span className="text-sm">
+                {isTermsExpanded ? 'Hide' : 'Show'} Terms
+              </span>
+              {isTermsExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </button>
+          </div>
+          {isTermsExpanded && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="border-t border-electric-blue/20 pt-6"
+            >
+              {/* Language menu moved here */}
+              <div className="flex items-center space-x-2 mb-6">
+                <Globe size={16} className="text-electric-blue" />
+                <span className="text-sm text-white/70">Language:</span>
+                <div className="flex space-x-1">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => setSelectedLanguage(lang.code)}
+                      className={`px-2 py-1 rounded text-sm transition-colors ${
+                        selectedLanguage === lang.code
+                          ? 'bg-electric-blue/20 text-electric-blue border border-electric-blue/30'
+                          : 'text-white/70 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      {lang.flag}
+                    </button>
+                  ))}
+                </div>
               </div>
-
-              {isTermsExpanded && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="border-t border-electric-blue/20 pt-6"
-                >
-                  {isLoadingTerms ? (
-                    <div className="flex items-center justify-center py-8">
-                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-electric-blue"></div>
-                      <span className="ml-3 text-white/70">Loading terms...</span>
-                    </div>
-                  ) : (
-                    <div 
-                      className="prose prose-invert max-w-none"
-                      dangerouslySetInnerHTML={{ __html: termsContent }}
-                    />
-                  )}
-                </motion.div>
+              {isLoadingTerms ? (
+                <div className="flex items-center justify-center py-8">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-electric-blue"></div>
+                  <span className="ml-3 text-white/70">Loading terms...</span>
+                </div>
+              ) : (
+                <div 
+                  className="prose prose-invert max-w-none"
+                  dangerouslySetInnerHTML={{ __html: termsContent }}
+                />
               )}
+            </motion.div>
+          )}
             </div>
           </motion.div>
         </div>
@@ -370,8 +374,8 @@ const NutCrackerPage = () => {
               Ready to Take <span className="text-electric-blue">Control</span>?
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Join thousands of users who have chosen privacy-first health tracking. 
-              Download NutCracker today and experience the difference.
+              No account needed, no data collected. Give it a try!
+              <br />It is entirely free and open source.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a

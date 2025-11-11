@@ -120,7 +120,7 @@ const Products = () => {
                 {product.status === 'Available' ? (
                   <>
                     <motion.a
-                      href={`${product.github}/releases`}
+                      href="https://play.google.com/store/apps/details?id=com.offlinelabs.nutcracker"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}

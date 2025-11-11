@@ -28,6 +28,7 @@
   .section-padding {
     @apply px-4 sm:px-6 lg:px-8;
   }
+
   
   .container-max {
     @apply max-w-7xl mx-auto;
