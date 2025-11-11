@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Zap, Shield, Heart } from 'lucide-react'
+import { ArrowDown, Zap, Shield, Heart, Target, Code } from 'lucide-react'
 import Image from 'next/image'
 
 import { useRef, useEffect, useContext } from 'react'
@@ -77,8 +77,8 @@ const Hero = () => {
           >
             {[
               { icon: Shield, text: 'Privacy First' },
-              { icon: Zap, text: 'Lightning Fast' },
-              { icon: Heart, text: 'Open Source' },
+              { icon: Target, text: 'Focused Utility' },
+              { icon: Code, text: 'Open Source' },
             ].map((feature, index) => (
               <motion.div
                 key={feature.text}
